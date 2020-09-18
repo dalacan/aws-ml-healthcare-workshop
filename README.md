@@ -12,7 +12,7 @@ The first step is to deploy a Cloudformation template that will perform most of 
 
 1. Download the cloudformation template
 
-Go to the following URL https://raw.githubusercontent.com/dalacan/aws-ml-healthcare-workshop/blob/master/aws-ml-healthcare-worshop.yaml, right click 'Save As' and download the cloudformation template.
+Go to the following URL https://raw.githubusercontent.com/dalacan/aws-ml-healthcare-workshop/master/aws-ml-healthcare-worshop.yaml, right click 'Save As' and download the cloudformation template.
 
 **Note** Make sure you save the file as a .yaml file.
 
