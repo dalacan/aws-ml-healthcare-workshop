@@ -2,6 +2,26 @@
 
 ## Introduction
 
+
+#### Machine learning in healthcare 
+The advent of Machine learning is undoubtfully speeding up the medical development, such as development of new drug discovery and manufacturing, automating the diagnosis through computer vision, bridging the gap to personalized treatment, reducing manual effort in organizing patients’ health records as well as assisting to address the problem of shortage of doctors. 
+Specifically, the availability of large amount of clinical data is opening up a lot new opportunities for digital transformation in healthcare, such as optimized workflow, automated diagnosis, progress tracing and accurate prediction. However, patients’ health records have been long captured and kept as hard copies. In addition, nearly 20% of the doctors still prefer to use paper nowadays. Such phenomenon greatly affected the pace of digitalization and knowledge sharing, thus limiting the power of recognize digital power in medical world.. Besides, the doctors’ notes are always captured with medical terms as free text, which is usually difficult to comprehend, thus further increasing the complexity of analysis.  To address the challenges in digitalization for medical records, we developed the workshop of  1) build, train and deploy a ML model with medical data, and 2) deploy a pipeline for Electronic Medical Records processing data and share with you in the following steps.
+
+
+## Objectives: 
+
+By the end of this workshop, you are expected to pick up the following skills:
+1)	To build, train and deploy a model with medical notes using Amazon SageMaker notebook,
+2)	To demo the convenience of digitalization hardcopy documents using Amazon Textract,
+3)	To demo the power of extracting medical terms from doctor’s notes using Amazon Sagemaker Comprehend,
+4)	To build a pipeline of automatic processing of medical in pdf format and predicting further treatment with Amazon Lambda, Amazon Textract, Amazon Comprehend Medical and SageMaker Endpoint . 
+
+The template to be deployed contains all of the codes and data you need to finish the workshop. To understand AWS ML services better, you are highly encouraged to write some of the code yourselves. The notebooks  have some cells where the you are asked to complete a challenge.
+
+
+
+
+
 ## Lab Instruction
 
 [Workshop Link Placeholder]
