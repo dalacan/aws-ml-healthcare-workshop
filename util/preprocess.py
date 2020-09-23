@@ -166,13 +166,7 @@ def dataframe_convert(df_raw,df_final, condition ):
 
 
 
-#### predict for single record ##
-def predict_from_numpy(predictor, data):
-    # Configure predictor for CSV input:
-    predictor.content_type = "text/csv"
-    predictor.serializer = sagemaker.predictor.csv_serializer
-    # Fetch result and load back to numpy:
-    return np.fromstring(predictor.predict(data).decode("utf-8"), sep=",")
+
 
 ##### the function to convert dataframe of medical conditions from long format to wide format
 
@@ -212,6 +206,9 @@ def df_mc_generator(df_mcs,colname_mc=colname_mc ,colname_other=['ID',"Label"] )
 def df_mc_generator_slim(df_mcs,colname_mc=colname_mc ,colname_other=['ID'] ): 
     
     ## remove duplicate rows
+    if 'ID' not in df_mcs:
+        df_mcs['ID']=0
+    
     df_1 = df_mcs.drop_duplicates(subset=['ID']).copy()
     #print(colname_mc)
     ## generate an empty dataframe first

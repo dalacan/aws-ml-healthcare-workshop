@@ -220,4 +220,24 @@ def predict_from_numpy(predictor, data):
     predictor.serializer = sagemaker.predictor.csv_serializer
     # Fetch result and load back to numpy:
     return np.fromstring(predictor.predict(data).decode("utf-8"), sep=",")
+
+#### predict for single record ##
+
+def predict_from_numpy_V2(predictor, data):
+    # Configure predictor for CSV input:
+   
+    #predictor.content_type = "text/csv"
+    
+    predictor.serializer = sagemaker.serializers.CSVSerializer()
+    predictor.serializer.CONTENT_TYPE = 'text/csv'
+    predictor.deserializer = sagemaker.deserializers.CSVDeserializer()
+
+    result=predictor.predict(data.to_numpy())[0]
+    
+    result_np = np.array([float(i) for i in result])
+   
+    
+    
+    return result_np#np.fromstring(predictor.predict(data.to_numpy()).decode("utf-8"), sep=",")
+
    
