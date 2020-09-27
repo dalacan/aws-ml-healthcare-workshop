@@ -10,11 +10,11 @@ Specifically, the availability of large amount of clinical data is opening up a 
 
 ## Objectives: 
 
-By the end of this workshop, you are expected to pick up the following skills:
-1)	To build, train and deploy a model with medical notes using Amazon SageMaker notebook,
-2)	To demo the convenience of digitalization hardcopy documents using Amazon Textract,
-3)	To demo the power of extracting medical terms from doctor’s notes using Amazon Sagemaker Comprehend,
-4)	To build a pipeline of automatic processing of medical in pdf format and predicting further treatment with Amazon Lambda, Amazon Textract, Amazon Comprehend Medical and SageMaker Endpoint . 
+By the end of this workshop, you would have learnt how to:
+1) Build, train and deploy a classification model with medical notes using Amazon SageMaker notebook
+2) Extract textual data from PDF reports using Amazon Textract
+3) Extract medical data from textual doctor’s notes using Amazon Sagemaker Comprehend
+4) Build a pipeline of automatic processing of medical in pdf format and predicting further treatment with Amazon Lambda, Amazon Textract, Amazon Comprehend   Medical and SageMaker Endpoint 
 
 The template to be deployed contains all of the codes and data you need to finish the workshop. To understand AWS ML services better, you are highly encouraged to write some of the code yourselves. The notebooks  have some cells where the you are asked to complete a challenge.
 
