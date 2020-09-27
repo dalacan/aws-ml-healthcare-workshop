@@ -4,8 +4,12 @@
 
 
 #### Machine learning in healthcare 
-The advent of Machine learning is undoubtfully speeding up the medical development, such as development of new drug discovery and manufacturing, automating the diagnosis through computer vision, bridging the gap to personalized treatment, reducing manual effort in organizing patients’ health records as well as assisting to address the problem of shortage of doctors. 
-Specifically, the availability of large amount of clinical data is opening up a lot new opportunities for digital transformation in healthcare, such as optimized workflow, automated diagnosis, progress tracing and accurate prediction. However, patients’ health records have been long captured and kept as hard copies. In addition, nearly 20% of the doctors still prefer to use paper nowadays. Such phenomenon greatly affected the pace of digitalization and knowledge sharing, thus limiting the power of recognize digital power in medical world.. Besides, the doctors’ notes are always captured with medical terms as free text, which is usually difficult to comprehend, thus further increasing the complexity of analysis.  To address the challenges in digitalization for medical records, we developed the workshop of  1) build, train and deploy a ML model with medical data, and 2) deploy a pipeline for Electronic Medical Records processing data and share with you in the following steps.
+The advent of Machine learning is undoubtfully speeding up the medical development, such as new drug discovery and manufacturing, automating the diagnosis through computer vision, personalized treatments and improvements to organization of patients’ health records.
+
+The availability of large amount of clinical data is opening up a lot new opportunities for digital transformation in the healthcare industry. Such as patient management optimization, AI predictive diagnosis and forecasting healthcare trajectories. However, patients’ health records have long been captured and kept as hard copies. In fact, nearly 20% of the doctors still prefer to use paper medical records. Such a phenomenon have greatly affected the pace of digitalization and knowledge sharing, thus limiting the ability to realize the potential from the wealth of medical data. When medical records are digitized, doctors’ notes are often captured in free text and is usually difficult to comprehend and extract meaningful data for analysis.  To address the challenges of digitalization of medical records, we have developed a workshop that will guide you to: 
+
+1) Build an medical document processing pipeline with Amazon Textract and Comprehend Medical 
+2) Build, train and deploy a classification machine learning model with medical data extracted from the medical document processing pipeline
 
 
 ## Objectives: 
