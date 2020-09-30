@@ -2,7 +2,8 @@ import seaborn as sns
 import matplotlib.pyplot  as plt
 import pandas as pd
 import boto3, botocore
-
+from tqdm import tqdm
+import boto3
 
 class color:
    PURPLE = '\033[95m'
@@ -44,12 +45,13 @@ def mc_barplot(df, threshold_score=0.9,topN=20):
     return df_mcs_vc
 
 
-## extract medical conditions in a batch
 
+#########*************************##########
 
-import pandas as pd
+## Function to extract a single record
 def extractMC_v2(json_file):
-    list_icd10=[]
+    
+    ## initialize the list variables for medical_conditions, scores and traits
     medical_conditions=[]
     scores=[]
     traits=[]
@@ -67,6 +69,7 @@ def extractMC_v2(json_file):
         df_mc = pd.DataFrame({'MEDICAL_CONDITION': pd.Series(medical_conditions), 'Score':pd.Series(scores),'Trait':pd.Series(traits)})
     return df_mc
 
+## extract medical conditions in a batch
 
 def extractMCbatch(transcriptionList,patientIDList):
     df_final = pd.DataFrame()
@@ -80,7 +83,6 @@ def extractMCbatch(transcriptionList,patientIDList):
         
         df_ind = extractMC_v2(item)
         df_ind['ID']=patient_id
-        patient_id=patient_id+1
         df_final=df_final.append(df_ind)
       
     
@@ -92,10 +94,9 @@ def extractMCbatch(transcriptionList,patientIDList):
     return df_final
 
 
-from tqdm import tqdm
-import boto3
 
-## this function will extract the subpopulation
+## this function will 
+## this function will extract the subpopulation given dataframe, medical_speciality 
 def subpopulation_comprehend(df, medical_specialty,sampleSize=200):
     ## select the sub population
     df_sub=df[df.medical_specialty==medical_specialty ].reset_index()
@@ -107,10 +108,7 @@ def subpopulation_comprehend(df, medical_specialty,sampleSize=200):
 
     ## remove missing entries
     df_sub_sub=df_sub_sub[df_sub_sub.transcription.notna()==True]
-    print("data shape after removing missing entries is ",df_sub_sub.shape)
-
-    #patient_ids=df_sub_sub['id'].to_list()
-   
+    print("data shape after removing missing entries is ",df_sub_sub.shape)   
     
     cm  = boto3.client(service_name='comprehendmedical', use_ssl=True, region_name = 'us-east-1')
     #idx=0
@@ -148,7 +146,6 @@ def corrPlot(df):
     return
 
 ##### function to interate the medical conditions and then convert to a wide formate
-
 def dataframe_convert(df_raw,df_final, condition ):
     
     #step1: get the sub dataframe 
