@@ -17,7 +17,9 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-
+## retrieve the top medical conditions based on confidence score
+## nFeature: number of features to retrieve
+## threshold: confidence score from comprehend
 def retrieve_mcList(df, nFeature=20,threshold=0.9):
     ## change all terms to lower case
     df['MEDICAL_CONDITION']=df['MEDICAL_CONDITION'].str.lower()
